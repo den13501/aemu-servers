@@ -37,7 +37,7 @@ docker-compose down
 docker build -t aemu-servers .
 
 # Run the servers
-docker run -d --rm -it -p 8080:8080 -p 27312:27312 -p 27313:27313 -p 27314:27314 --name aemu-servers aemu-servers:latest
+docker run -d --rm -it -p 8090:8080 -p 27312:27312 -p 27313:27313 -p 27314:27314 --name aemu-servers aemu-servers:latest
 
 # View logs
 docker logs -f aemu-servers
@@ -55,6 +55,6 @@ docker stop aemu-servers
 
 ## Status Page
 
-Access the status page at: [http://localhost:8080](http://localhost:8080)
+Access the status page at: [http://localhost:8090](http://localhost:8090)
 
-The integrated server also provides a JSON API endpoint at: [http://localhost:8080/data.json](http://localhost:8080/data.json)
+The integrated server also provides a JSON API endpoint at: [http://localhost:8090/data.json](http://localhost:8090/data.json)
